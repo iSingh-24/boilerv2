@@ -55,4 +55,18 @@ module.exports = {
  * Sass-loader - turns sass into css
  * Css-loader - turns css into commonJS
  * Style-loader - injects styles into the DOM
+ *
+ *
+ *
+ * babel/core - Core babel compiler responsible for parsing JavaScript code and transforming it according to plugins and presets configured. Output code generated can run in a wide
+ * variety of JS environments. It basically transpiles your Javascript code into code that is still Javascript but making it more compatible and providing a means to use the latest
+ * ECMAScript features.
+ *
+ * babel/preset-env - Provides Babel with the ability to compile modern JS features into syntax compatible with a wide range of browsers.
+ *
+ * babel/preset-react - Provides Babel with the ability to compile JSX syntax used by React into regular JS code. It transforms the JSX syntax into what the function calls would have
+ * originally been to create the react elements. Syntactic sugar gets converted into JS code.
+ *
+ * babel-loader - Babel loader for webpack which allows Babel to transpile JS code while it's being loaded by Webpack. This is necessary due to some features in JS such as arrow functions
+ * as well as template literals that are not supported by all browsers. Ensures that your code will run in a wider variety of environments.
  */
