@@ -5,5 +5,5 @@
  *
  * OPTIONAL: Read more about diff webpack config files
  */
-import './main.css';
+import './main.scss';
 console.log('helloo');
