@@ -1,0 +1,20 @@
+{
+  "name": "BoilerPlate-FS",
+  "version": "1.0.0",
+  "description": "Boiler Plate Hooked With React",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSingh-24/BoilerPlate-FS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSingh-24/BoilerPlate-FS/issues"
+  },
+  "homepage": "https://github.com/iSingh-24/BoilerPlate-FS#readme"
+}
