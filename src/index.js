@@ -1,8 +1,12 @@
 /**
- * TODO: add a means to read babel and finish setting up client-side
  * TODO: set up server-side related tasks
  *
  * OPTIONAL: Read more about diff webpack config files
  */
-import './main.scss';
-console.log('helloo');
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { App } from './Components/App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<App />);
