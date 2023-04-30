@@ -6,21 +6,16 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'public/webpack'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'main.[contenthash].js',
+        assetModuleFilename: 'images/[name].[hash][ext]',
     },
     module: {
         rules: [
             { test: /\.html$/, use: ['html-loader'] },
             {
                 test: /\.(svg|png|jpg|gif)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash]. [ext]',
-                        outputPath: 'imgs',
-                    },
-                },
+                type: 'asset/resource',
             },
         ],
     },
