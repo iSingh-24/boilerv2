@@ -24,7 +24,15 @@ module.exports = {
                 test: /\.(svg|png|jpg|gif)$/,
                 type: 'asset/resource',
             },
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            },
         ],
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -69,4 +77,15 @@ module.exports = {
  *
  * babel-loader - Babel loader for webpack which allows Babel to transpile JS code while it's being loaded by Webpack. This is necessary due to some features in JS such as arrow functions
  * as well as template literals that are not supported by all browsers. Ensures that your code will run in a wider variety of environments.
- */
+ * 
+ * 
+ * 
+ * The resolve part below specifies which file extentions Webpack should try to resolve when importing the modules. By default it will look for a js extension but with this configuration
+ * Webpack will also look for files with the .jsx extension. 
+ *
+ *   resolve: {
+    extensions: ['.js', '.jsx'],
+  }
+
+  A use case of this would be something like importing App from './components/App' vs './components/App.jsx' 
+  */
