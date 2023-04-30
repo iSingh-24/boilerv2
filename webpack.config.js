@@ -9,7 +9,18 @@ module.exports = {
         filename: 'main.[contenthash].js',
     },
     module: {
-        rules: [{ test: /\.html$/, use: ['html-loader'] }],
+        rules: [
+            { test: /\.html$/, use: ['html-loader'] },
+            {
+                test: /\.(svg|png|jpg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                    },
+                },
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -27,4 +38,5 @@ module.exports = {
  * is the file that we need to load. You still need to tell webpack how you want to handle these files.
  *
  *
+ * file-loader - handles the images like svgs, pngs, jpgs etc.
  */
