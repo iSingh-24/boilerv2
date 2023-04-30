@@ -12,6 +12,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
             { test: /\.html$/, use: ['html-loader'] },
             {
                 test: /\.(svg|png|jpg|gif)$/,
@@ -41,4 +45,11 @@ module.exports = {
  *
  *clean-webpack-plugin - used to clean up extra hashed files created by webpack. It is typically used in production mode
  *I believe but it can be used in development mode as well too.
+ *
+ *Sass-loader depends on node-sass
+ *
+ *
+ * Sass-loader - turns sass into css
+ * Css-loader - turns css into commonJS
+ * Style-loader - injects styles into the DOM
  */
