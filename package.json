@@ -6,7 +6,8 @@
   "scripts": {
     "build:dev": "webpack --watch",
     "start:dev": "npm run build:dev & nodemon ./server/server.js",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "start2": "webpack serve --config webpack.config.js --open"
   },
   "repository": {
     "type": "git",
