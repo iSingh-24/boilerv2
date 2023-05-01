@@ -2,7 +2,7 @@
   "name": "BoilerPlate-FS",
   "version": "1.0.0",
   "description": "Boiler Plate Hooked With React",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
     "build:dev": "webpack --watch",
     "start:dev": "npm run build:dev & nodemon ./server/server.js",
