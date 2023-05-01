@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const App = () => {
-    const [count, setCount] = useState(0);
-    return <div>{count}</div>;
+    return <div>Welcome to React From App Component</div>;
 };
