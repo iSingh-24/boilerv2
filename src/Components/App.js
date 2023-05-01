@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const App = () => {
-    return <div>App Component</div>;
+    const [count, setCount] = useState(0);
+    return <div>{count}</div>;
 };
