@@ -5,9 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
-    devServer: {
-        static: './dist',
-    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.[contenthash].js',
@@ -88,4 +85,8 @@ module.exports = {
   }
 
   A use case of this would be something like importing App from './components/App' vs './components/App.jsx' 
+
+
+      "start:dev": "npm run start &&  nodemon ./server/index.js & webpack serve --config webpack.config.js --open"
+
   */
