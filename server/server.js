@@ -3,6 +3,10 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'));
+
 // app.use(express.static(path.join(__dirname, '../dist')));
 
 // app.get('/', (req, res) => {
@@ -16,10 +20,6 @@ const app = express();
  * So when you set extended to false, the urlencoded middleware will use the built-in querystring library to parse the incoming data, which can limit
  * the size of the parsed data and may not be able to handle complex nested objects. If you need to parse complex nested objects, it's better to set extended to true.
  */
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(morgan('dev'));
 
 app.use(express.static(path.resolve(__dirname, '..', 'dist')));
 
